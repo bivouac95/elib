@@ -5,13 +5,19 @@ import './header.css'
 export default function Header() {
     return (
         <>
-        <nav>
-            <button>домик</button>
+        <nav className='header__main'>
+            <button>
+                <img src="./public/header/home.svg" alt="" />
+            </button>
             <div className="search">
                 <input type="text" placeholder="Поиск"/>
-                <button>найти</button>
+                <button>
+                    <img src="./public/header/loopa.svg" alt="" />
+                </button>
             </div>
-            <button>навигация</button>
+            <button>
+                <img src="./public/header/burger.svg" alt="" />
+            </button>
         </nav>
         </>
     )

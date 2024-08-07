@@ -1,5 +1,113 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #FDFDFD;
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 54px;
+  background-color: #fdfdfd;
 }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_content {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 870px;
+  width: 100%;
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+html {
+  margin: 0;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 117px;
+  letter-spacing: 0%;
+  margin: 0;
+  color: #1C1C1C;
+  overflow-wrap: break-word;
+}
+
+h2 {
+  font-family: Montserrat;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 88px;
+  letter-spacing: 0%;
+  margin: 0;
+  color: #1C1C1C;
+}
+
+h3 {
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 59px;
+  letter-spacing: 0%;
+  margin: 0;
+  color: #1C1C1C;
+}
+
+.text {
+  font-family: Merriweather;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0%;
+  margin: 0;
+  color: #1C1C1C;
+}
+
+.ui {
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #1C1C1C;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: rgb(253, 253, 253);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 78px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 49px;
+    letter-spacing: 0%;
+  }
+
+  h2 {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 49px;
+    letter-spacing: 0%;
+  }
+}
+
