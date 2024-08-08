@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./block.css";
 
+import Image from "./small_image";
+
 const Block = ({block}) => {
 
   return (
@@ -11,6 +13,11 @@ const Block = ({block}) => {
       </header>
       <div className="line"></div>
       <main className="block__main">
+        <div className="block__images">
+          {block.images.map((image) => (
+            <Image link={image} key={image}/>
+          ))}
+        </div>
         <p className="block__text">{block.content}</p>
       </main>
       <div className="block__read-more" onClick={()=> {}}>

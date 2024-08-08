@@ -22,7 +22,7 @@ const UsualPage = observer(() => {
       <div className="page">
         <Header />
         <main className="main_content">
-          <h2>МБОУ СОШ 24</h2>
+          <h2>Информационно библиотечный центр</h2>
           <h1>{page.name}</h1>
           <div className="section_name">
             <div className="line"></div>

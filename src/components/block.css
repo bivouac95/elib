@@ -39,6 +39,12 @@
   gap: 20px;
 }
 
+.block__images {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .block__text {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -78,5 +84,9 @@
 @media screen and (max-width: 450px) {
     .block__text{
         max-height: 300px;
+    }
+
+    .block__images{
+      flex-direction: column;
     }
 }
