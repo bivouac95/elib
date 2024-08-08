@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../header.jsx";
-import Footer from "../footer.jsx";
-import Block from "../block.jsx";
+import Header from "../components/header.jsx";
+import Footer from "../components/footer.jsx";
+import Block from "../components/block.jsx";
 import "./main_page.css";
 import "./page.css";
 
