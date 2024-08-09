@@ -9,21 +9,19 @@ import "./header.css";
 import HeaderMenu from "./header__menu.jsx";
 
 class MenuOpen {
-  open = false; // Initialize open state
-
+  open = false;
   constructor() {
     makeAutoObservable(this);
   }
-
   toggle() {
     runInAction(() => {
-      this.open = !this.open; // Toggle the open state
+      this.open = !this.open;
     });
   }
 }
 
 const Header = observer(() => {
-  const [menuOpen] = useState(() => new MenuOpen()); // Use useState to retain the instance
+  const [menuOpen] = useState(() => new MenuOpen()); 
 
   return (
     <>

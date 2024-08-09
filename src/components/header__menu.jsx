@@ -7,29 +7,34 @@ import { useNavigate } from "react-router";
 
 
 const HeaderMenu = ({style}) => {
-
+  const navigate = useNavigate();
+  function NavigateTo(path) {
+    navigate(path);
+    navigate(0);
+  }
+  
   return (
     <main
       className="header__menu"
       style={style}
     >
-      <nav>
-        <Link to="/:news">Новости</Link>
+      <nav onClick={() => NavigateTo("/:news")}>
+        Новости
       </nav>
-      <nav>
-        <Link to="/:files">Файлы</Link>
+      <nav onClick={() => NavigateTo("/:files")}>
+        Файлы
       </nav>
-      <nav>
-        <Link to="/:articles">Статьи</Link>
+      <nav onClick={() => NavigateTo("/:articles")}>
+        Статьи
       </nav>
-      <nav>
-        <Link to="/:feedback">Обратная связь</Link>
+      <nav onClick={() => NavigateTo("/:feedback")}>
+      Обратная связь
       </nav>
-      <nav>
-        <Link to="/:elibrary">Элктронная библиотека</Link>
+      <nav onClick={() => NavigateTo("/:elib")}>
+      Элктронная библиотека
       </nav>
-      <nav>
-        <Link to="/:gallery">Фотогалерея</Link>
+      <nav onClick={() => NavigateTo("/:gallery")}>
+      Фотогалерея
       </nav>
     </main>
   );
