@@ -14,6 +14,7 @@ class PagesState {
   name = "";
   key = "";
   content = [];
+  loaded = false;
 
   async getContent() {
     const { data, error } = await supabase
@@ -26,6 +27,7 @@ class PagesState {
     } else {
       runInAction(() => {
         this.content = data;
+        this.loaded = true;
       });
     }
   }

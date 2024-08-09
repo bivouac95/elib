@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { Link } from 'react-router-dom'
 import './header.css'
 
+import HeaderMenu from './header__menu.jsx'
+
 export default function Header() {
     return (
         <>
@@ -21,6 +23,7 @@ export default function Header() {
             <button>
                 <img src="./header/burger.svg" alt="" />
             </button>
+            <HeaderMenu />
         </nav>
         </>
     )
