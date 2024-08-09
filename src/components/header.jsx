@@ -8,20 +8,12 @@ import "./header.css";
 
 import HeaderMenu from "./header__menu.jsx";
 
-class MenuOpen {
-  open = false;
-  constructor() {
-    makeAutoObservable(this);
-  }
-  toggle() {
-    runInAction(() => {
-      this.open = !this.open;
-    });
-  }
-}
 
 const Header = observer(() => {
-  const [menuOpen] = useState(() => new MenuOpen()); 
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+  const toggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
 
   return (
     <>
@@ -37,11 +29,12 @@ const Header = observer(() => {
             <img src="./header/loopa.svg" alt="" />
           </button>
         </div>
-        <button onClick={() => menuOpen.toggle()}>
+        <button onClick={() => toggle()}>
           <img src="./header/burger.svg" alt="" />
         </button>
         <HeaderMenu
-          style={menuOpen.open ? { display: "flex" } : { display: "none" }}
+          isMenuOpen={isMenuOpen}
+          toggle={toggle}
         />
       </nav>
     </>
