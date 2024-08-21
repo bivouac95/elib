@@ -35,6 +35,7 @@ class PagesState {
   async update(key) {
     runInAction(() => {
       this.key = key;
+      this.loaded = false;
     });
     const { data, error } = await supabase
       .from("web_pages")

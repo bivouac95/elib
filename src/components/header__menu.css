@@ -10,8 +10,12 @@
     border-radius: 5px;
 }
 
+.header__menu a{
+    text-decoration: none;
+}
 
-.header__menu nav{
+
+.header__menu nav {
     color: rgb(253, 253, 253);
     font-family: Montserrat;
     font-size: 20px;
@@ -19,7 +23,6 @@
     line-height: 24px;
     letter-spacing: 0%;
     text-align: left;
-    text-decoration: none;
 
     width: 187px;
     padding: 10px;
@@ -27,6 +30,7 @@
     border-radius: 5px;
 
     cursor: pointer;
+    border: 1px solid rgb(253, 253, 253, 0);
 }
 
 .header__menu nav:hover{

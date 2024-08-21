@@ -1,6 +1,3 @@
-import { makeAutoObservable, runInAction } from "mobx";
-import { observer } from "mobx-react-lite";
-
 import React, { useState } from "react"; // Import useState
 import ReactDOM from "react-dom/client";
 import { Link } from "react-router-dom";
@@ -9,7 +6,7 @@ import "./header.css";
 import HeaderMenu from "./header__menu.jsx";
 
 
-const Header = observer(() => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const toggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -39,6 +36,6 @@ const Header = observer(() => {
       </nav>
     </>
   );
-});
+};
 
 export default Header;

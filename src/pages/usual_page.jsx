@@ -17,7 +17,7 @@ const UsualPage = observer(() => {
   let { key } = useParams();
   useEffect(() => {
     page.update(String(key).substring(1));
-  }, []);
+  }, [key]);
 
   return (
     <div className="page">
