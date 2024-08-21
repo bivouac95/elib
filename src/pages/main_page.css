@@ -46,6 +46,10 @@
   outline: inherit;
 }
 
+.name_selection button img {
+  transition: all 0.1s;
+}
+
 .name_selection__menu {
   z-index: 0;
   position: absolute;

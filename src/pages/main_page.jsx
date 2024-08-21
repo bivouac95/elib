@@ -68,7 +68,7 @@ const Main = observer(() => {
             </div>
             <h2>{name}</h2>
             <button onClick={() => setIsOpen(!isOpen)}>
-              <img src="./src/assets/page_shift.png" alt=".-." />
+              <img src="./src/assets/page_shift.png" alt=".-." style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}/>
             </button>
           </div>
           {!page.loaded ? (
