@@ -17,6 +17,7 @@ function format(string) {
 const Block = ({ block }) => {
   switch (block.page) {
     case 1:
+    case 3:
       return (
         <div className="block">
           <header className="block__header">
@@ -58,6 +59,15 @@ const Block = ({ block }) => {
           </div>
         </div>
       );
+    
+      case 5:
+        return (
+          <div className="large_image">
+            <div className="large_image__info">{format(block.date)}</div>
+            <img src={block.content} alt="" className="large_image__image"/>
+            <img src={block.content} alt="" className="large_image__backgroung"/>
+          </div>
+        );
   }
 };
 

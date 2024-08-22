@@ -118,6 +118,20 @@ button {
   width: 100%;
 }
 
+.section_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.section_column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 870px;
+}
+
 @media screen and (max-width: 800px) {
   h1 {
     font-size: 64px;

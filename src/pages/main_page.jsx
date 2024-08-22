@@ -68,7 +68,13 @@ const Main = observer(() => {
             </div>
             <h2>{name}</h2>
             <button onClick={() => setIsOpen(!isOpen)}>
-              <img src="./src/assets/page_shift.png" alt=".-." style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}/>
+              <img
+                src="./src/assets/page_shift.png"
+                alt=".-."
+                style={{
+                  transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                }}
+              />
             </button>
           </div>
           {!page.loaded ? (
@@ -78,9 +84,11 @@ const Main = observer(() => {
           ) : (
             <>
               <div className="line"></div>
-              {page.content.map((item) => (
-                <Block key={item.id} block={item} />
-              ))}
+              <div className={page.id == 5 ? "section_grid" : "section_column"}>
+                {page.content.map((item) => (
+                  <Block key={item.id} block={item} />
+                ))}
+              </div>
             </>
           )}
         </div>

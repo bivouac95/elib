@@ -24,7 +24,7 @@ const UsualPage = observer(() => {
       <Header />
       {!page.loaded ? (
         <div className="loader">
-          <FadeLoader color="rgb(36, 39, 63)"/>
+          <FadeLoader color="rgb(36, 39, 63)" />
         </div>
       ) : (
         <>
@@ -34,9 +34,11 @@ const UsualPage = observer(() => {
             <div className="section_name">
               <div className="line"></div>
             </div>
-            {page.content.map((item) => (
-              <Block key={item.id} block={item} />
-            ))}
+            <div className={page.id == 5 ? "section_grid" : "section_column"}>
+              {page.content.map((item) => (
+                <Block key={item.id} block={item} />
+              ))}
+            </div>
           </main>
           <Footer />
         </>
