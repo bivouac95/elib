@@ -26,9 +26,9 @@ const Block = ({ block }) => {
           <div className="line"></div>
           <main className="block__main">
             <div className="block__images">
-              {block.images.map((image) => (
+              {block.images ? block.images.map((image) => (
                 <Image link={image} key={image} />
-              ))}
+              )) : []}
             </div>
             <p className="block__text">{block.content}</p>
           </main>

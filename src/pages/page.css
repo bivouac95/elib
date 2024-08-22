@@ -62,7 +62,7 @@ button {
   cursor: pointer;
 }
 
-.ui_button{
+.ui_button {
   border: none;
   border-radius: 5px;
   background: rgb(36, 39, 63);
@@ -74,11 +74,11 @@ button {
   align-items: center;
 }
 
-.ui_button:hover{
+.ui_button:hover {
   background: rgb(56, 60, 92);
 }
 
-.ui_button:active{
+.ui_button:active {
   background: rgb(77, 82, 120);
 }
 
@@ -110,7 +110,7 @@ button {
   border-radius: 5px;
 }
 
-.loader{
+.loader {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,17 +141,23 @@ button {
   }
 
   h2 {
-font-size: 48px;
-font-weight: 400;
-line-height: 59px;
-letter-spacing: 0%;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 59px;
+    letter-spacing: 0%;
   }
 
   h3 {
-font-size: 36px;
-font-weight: 400;
-line-height: 44px;
-letter-spacing: 0%;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 0%;
+  }
+
+  .section_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 }
 

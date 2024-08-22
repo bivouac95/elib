@@ -29,7 +29,6 @@ class PagesState {
         this.content = data;
         this.loaded = true;
       });
-      console.log(this.content.length);
     }
   }
 
