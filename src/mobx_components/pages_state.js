@@ -10,7 +10,7 @@ class PagesState {
     if (key !== "") this.update(key);
   }
 
-  id = NaN;
+  id = null;
   name = "";
   key = "";
   content = [];

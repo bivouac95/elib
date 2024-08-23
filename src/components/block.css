@@ -22,6 +22,12 @@
   );
 }
 
+.block__header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .block__read-more {
   color: rgb(28, 28, 28);
   font-family: Montserrat;

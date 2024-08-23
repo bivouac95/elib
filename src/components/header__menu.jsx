@@ -2,21 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { useLocation } from "react-router";
 import "./header__menu.css";
-
-import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
 const HeaderMenu = ({ isMenuOpen, toggle }) => {
-  const navigate = useNavigate();
   const path = useLocation().pathname;
-  
-
-  function NavigateTo(newpath) {
-    navigate(newpath);
-    toggle();
-    if (path === newpath) return;
-    if (newpath[1] === ":") navigate(0);
-  }
 
 
   return (

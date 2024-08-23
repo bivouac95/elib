@@ -8,7 +8,7 @@ export default function Footer() {
       <main>
         <section className="footer__section">
           <h3>Контактная информация</h3>
-          <div className="line"></div>
+          <div className="line line--white"></div>
           <a href="mailto:school54@gmail.com">school54@gmail.com</a>
           <p>99-99-99</p>
           <p>672026, г.Чита, улица Гайдара, дом 3а</p>

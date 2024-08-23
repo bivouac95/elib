@@ -29,10 +29,10 @@ const UsualPage = observer(() => {
       ) : (
         <>
           <main className="main_content">
-            <h2>Информационно библиотечный центр</h2>
-            <h1>{page.name}</h1>
             <div className="section_name">
-              <div className="line"></div>
+              <h2>Информационно библиотечный центр</h2>
+              <h1>{page.name}</h1>
+              <div className="line line--black"></div>
             </div>
             <div className={page.id == 5 ? "section_grid" : "section_column"}>
               {page.content.map((item) => (

@@ -77,21 +77,21 @@ const Main = observer(() => {
               />
             </button>
           </div>
-          {!page.loaded ? (
-            <div className="loader">
-              <FadeLoader color="rgb(36, 39, 63)" />
-            </div>
-          ) : (
-            <>
-              <div className="line"></div>
-              <div className={page.id == 5 ? "section_grid" : "section_column"}>
-                {page.content.map((item) => (
-                  <Block key={item.id} block={item} />
-                ))}
-              </div>
-            </>
-          )}
+          <div className="line line--black"></div>
         </div>
+        {!page.loaded ? (
+          <div className="loader">
+            <FadeLoader color="rgb(36, 39, 63)" />
+          </div>
+        ) : (
+          <>
+            <div className={page.id == 5 ? "section_grid" : "section_column"}>
+              {page.content.map((item) => (
+                <Block key={item.id} block={item} />
+              ))}
+            </div>
+          </>
+        )}
       </main>
       <Footer />
     </div>
