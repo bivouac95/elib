@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
 .block__read-more {
@@ -148,6 +149,13 @@
   color: rgb(28, 28, 28);
 }
 
+.paragraph{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+}
 
 
 @media screen and (max-width: 450px) {

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { useNavigate } from "react-router";
+import parse from 'html-react-parser';
+
 import "./block.css";
+import "./block__subsection.css";
 
 import Image from "./small_image";
 
@@ -63,6 +66,25 @@ const Block = ({ block }) => {
             >
               <img src="./page/download.svg" alt="" />
             </button>
+          </div>
+        </div>
+      );
+
+    case 4:
+      return (
+        <div className="block">
+          <header className="block__header">
+            <h3>{block.headling}</h3>
+            <div className="line line--white"></div>
+          </header>
+          <main className="block__main">
+            {parse(block.content)}
+          </main>
+          <div
+            className="block__read-more"
+            onClick={() => navigate(``)}
+          >
+            Посетить сайт
           </div>
         </div>
       );
