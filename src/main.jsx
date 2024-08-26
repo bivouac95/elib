@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import UsualPage from "./pages/usual_page.jsx";
 import MainPage from "./pages/main_page.jsx";
 import BlockPage from "./pages/block_page.jsx";
+import SearchPage from "./pages/search_page.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<MainPage />} />
         <Route path="/:key" element={<UsualPage />} />
         <Route path="/article/:id" element={<BlockPage />} />
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
     </Router>
   </React.StrictMode>
