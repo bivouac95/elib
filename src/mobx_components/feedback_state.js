@@ -1,4 +1,8 @@
 import { makeAutoObservable, runInAction } from "mobx";
+import { createClient } from "@supabase/supabase-js";
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_API;
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 class FeedbackState {
   constructor() {
@@ -42,15 +46,26 @@ class FeedbackState {
     });
   };
 
-  send(){
-    this.sent = true
-    console.log(this.name, this.surname, this.email, this.theme, this.text)
-    this.name = ""
-    this.surname = ""
-    this.email = ""
-    this.theme = ""
-    this.text = ""
-  }
+  send = async () => {
+    this.sent = true;
+    
+    const { data, error } = await supabase
+      .from("feedback")
+      .insert([{
+        name: this.name,
+        surname: this.surname,
+        email: this.email,
+        theme: this.theme,
+        text: this.text
+      }])
+      .select();
+
+    this.name = "";
+    this.surname = "";
+    this.email = "";
+    this.theme = "";
+    this.text = "";
+  };
 }
 
 export default new FeedbackState();
