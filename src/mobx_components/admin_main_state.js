@@ -44,6 +44,7 @@ class AdminState {
         break;
       }
       case "update": {
+        this.navigete("update/:" + this.currentOption)
         this.close()
         break;
       }
