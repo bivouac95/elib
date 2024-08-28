@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { useNavigate } from "react-router";
-import parse from 'html-react-parser';
+import parse from "html-react-parser";
 
 import "./block.css";
 import "./block__subsection.css";
@@ -30,7 +30,14 @@ const Block = ({ block }) => {
             <div className="line line--white"></div>
           </header>
           <main className="block__main">
-            <div className="block__images">
+            <div
+              className="block__images"
+              style={
+                !block.images || block.images.length == 0
+                  ? { display: "none" }
+                  : {}
+              }
+            >
               {block.images
                 ? block.images.map((image) => (
                     <Image link={image} key={image} />
@@ -77,13 +84,8 @@ const Block = ({ block }) => {
             <h3>{block.headling}</h3>
             <div className="line line--white"></div>
           </header>
-          <main className="block__main">
-            {parse(block.content)}
-          </main>
-          <div
-            className="block__read-more"
-            onClick={() => navigate(``)}
-          >
+          <main className="block__main">{parse(block.content)}</main>
+          <div className="block__read-more" onClick={() => navigate(``)}>
             Посетить сайт
           </div>
         </div>

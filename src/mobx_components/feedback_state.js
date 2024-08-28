@@ -47,8 +47,10 @@ class FeedbackState {
   };
 
   send = async () => {
+    if (this.text === "" || this.email === "" || this.name === "") return;
+
     this.sent = true;
-    
+
     const { data, error } = await supabase
       .from("feedback")
       .insert([{
