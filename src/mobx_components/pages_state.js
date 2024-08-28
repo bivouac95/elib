@@ -32,7 +32,8 @@ class PagesState {
     }
   }
 
-  async update(key) {
+
+  async update(key = this.key) {
     runInAction(() => {
       this.key = key;
       this.loaded = false;
