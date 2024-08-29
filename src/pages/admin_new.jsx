@@ -36,8 +36,6 @@ const AdminNew = observer(() => {
 
   let content = "";
 
-  
-
   switch (flag) {
     case "update": {
       content = (
