@@ -7,6 +7,10 @@
     gap: 20px;
 }
 
+.block__main {
+    width: 100%;
+}
+
 .block--article .text {
     text-align: justify;
     white-space: pre-wrap;
@@ -22,8 +26,15 @@
     height: 60vh;
 }
 
+.block__nav{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .block__return {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
+

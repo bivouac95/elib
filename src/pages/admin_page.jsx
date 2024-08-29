@@ -17,7 +17,6 @@ const AdminPage = observer(() => {
   return (
     <div className="page page--admin">
       <Header />
-      <>
         <main className="main_content">
           <div className="section_name">
             <h2>Информационно библиотечный центр</h2>
@@ -115,7 +114,6 @@ const AdminPage = observer(() => {
           </a>
         </main>
         <Footer />
-      </>
     </div>
   );
 });

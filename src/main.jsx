@@ -7,6 +7,7 @@ import SearchPage from "./pages/search_page.jsx";
 import AdminPage from "./pages/admin_page.jsx";
 import AdminDelete from "./pages/admin_delete-list.jsx";
 import AdminUpdateList from "./pages/admin_update-list.jsx";
+import AdminNew from "./pages/admin_new.jsx";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/admin/delete/:key" element={<AdminDelete />} />
         <Route path="/admin/update/:key" element={<AdminUpdateList />} />
+        <Route path="/admin/new" element={<AdminNew />} />
       </Routes>
     </Router>
   </React.StrictMode>

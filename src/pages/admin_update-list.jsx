@@ -39,7 +39,7 @@ const AdminUpdateList = observer(() => {
               <div className={page.id == 5 ? "section_grid" : "section_column"}>
                 {page.content.map((item) => (
                   <div className="admin__list__option" key={item.id + "option"}>
-                    <div className="option__hover" onClick={() => {}}>
+                    <div className="option__hover" onClick={() => {navigate(`/admin/new?flag=update&id=${item.id}`)}}>
                       <h3>Изменить</h3>
                     </div>
                     <Block key={item.id + "block"} block={item} />

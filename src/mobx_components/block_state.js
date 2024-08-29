@@ -45,6 +45,29 @@ class BlockState {
       }
     }
   }
+
+  set = (key, value) => {
+    runInAction(() => {
+      this[key] = value;
+    });
+  };
+
+  async saveData() {
+    const { data, error } = await supabase
+      .from("articles")
+      .update({
+        headling: this.headling,
+        images: this.images,
+        content: this.content,
+      })
+      .eq("id", this.id);
+
+    if (error) {
+      console.error(error);
+    } else {
+      this.update(this.id);
+    }
+  }
 }
 
 export default new BlockState();
