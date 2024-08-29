@@ -15,14 +15,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/:key" element={<UsualPage />} />
-        <Route path="/article/:id" element={<BlockPage />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/admin" element={<AdminPage />} />
-        <Route path="/admin/delete/:key" element={<AdminDelete />} />
-        <Route path="/admin/update/:key" element={<AdminUpdateList />} />
-        <Route path="/admin/new" element={<AdminNew />} />
+        <Route path="elib/" element={<MainPage />} />
+        <Route path="elib/:key" element={<UsualPage />} />
+        <Route path="elib/article/:id" element={<BlockPage />} />
+        <Route path="elib/search" element={<SearchPage />} />
+        <Route path="elib/admin" element={<AdminPage />} />
+        <Route path="elib/admin/delete/:key" element={<AdminDelete />} />
+        <Route path="elib/admin/update/:key" element={<AdminUpdateList />} />
+        <Route path="elib/admin/new" element={<AdminNew />} />
       </Routes>
     </Router>
   </React.StrictMode>
