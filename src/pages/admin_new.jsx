@@ -3,7 +3,6 @@ import Header from "../components/header.jsx";
 import Footer from "../components/footer.jsx";
 import Image from "../components/small_image";
 import FadeLoader from "react-spinners/FadeLoader.js";
-import Textarea from "react-autosize";
 
 import { useSearchParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
@@ -53,7 +52,7 @@ const AdminNew = observer(() => {
               <div className="section_column">
                 <div className="block">
                   <header className="block__header">
-                    <Textarea className="form form--h3" value={block.headling} onChange={(e) => block.set("headling", e.target.value)}/>
+                    <textarea className="form form--h3" value={block.headling} onChange={(e) => block.set("headling", e.target.value)}/>
                     <div className="line line--white"></div>
                   </header>
                   <main className="block__main">
@@ -74,7 +73,7 @@ const AdminNew = observer(() => {
                           ))
                         : []}
                     </div>
-                    <Textarea className="form form--text" value={block.content} onChange={(e) => block.set("content", e.target.value)}/>
+                    <textarea className="form form--text" value={block.content} onChange={(e) => block.set("content", e.target.value)}/>
                   </main>
                 </div>
                 <div className="block__nav">
