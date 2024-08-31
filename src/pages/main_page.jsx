@@ -61,7 +61,7 @@ const Main = observer(() => {
                 <h3> Статьи </h3>
               </nav>
               <nav onClick={(event) => HandleClick(event, "elib")}>
-                <h3> Элктронная библиотека </h3>
+                <h3> Электронная библиотека </h3>
               </nav>
               <nav onClick={(event) => HandleClick(event, "gallery")}>
                 <h3> Фотогалерея </h3>
