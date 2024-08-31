@@ -180,7 +180,7 @@ const AdminNew = observer(() => {
                       className="ui_button"
                       onClick={() => {
                         switch (flag) {
-                          case "updete":
+                          case "update":
                             block.saveData();
                             navigate("/admin");
                             break;
@@ -256,7 +256,7 @@ const AdminNew = observer(() => {
                       className="ui_button"
                       onClick={() => {
                         switch (flag) {
-                          case "updete":
+                          case "update":
                             block.saveData();
                             navigate("/admin");
                             break;
@@ -375,7 +375,7 @@ const AdminNew = observer(() => {
                       className="ui_button"
                       onClick={() => {
                         switch (flag) {
-                          case "updete":
+                          case "update":
                             block.saveData();
                             navigate("/admin");
                             break;
