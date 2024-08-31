@@ -38,6 +38,7 @@ const Main = observer(() => {
     <div className="page">
       <Header />
       <header className="header-section">
+        <img className="header__background" src="./page/first_screen.png" alt="" />
         <main>
           <h1>Информационно библиотечный центр</h1>
           <h2>МБОУ СОШ 24</h2>
