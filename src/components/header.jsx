@@ -33,7 +33,7 @@ const Header = observer(() => {
       <nav className="header__main">
         <Link to="/">
           <button>
-            <img src="../../header/home.svg" alt="" />
+            <img src="./header/home.svg" alt="" />
           </button>
         </Link>
         <div className="search">
@@ -45,11 +45,11 @@ const Header = observer(() => {
             onChange={(e) => setKey(e.target.value)}
           />
           <button onClick={doSearch}>
-            <img src="../../header/loopa.svg" alt="" />
+            <img src="./header/loopa.svg" alt="" />
           </button>
         </div>
         <button onClick={() => toggle()}>
-          <img src="../../header/burger.svg" alt="" />
+          <img src="./header/burger.svg" alt="" />
         </button>
         <HeaderMenu isMenuOpen={isMenuOpen} toggle={toggle} />
       </nav>

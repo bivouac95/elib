@@ -35,7 +35,7 @@ class AdminState {
   action(type) {
     switch (type) {
       case "create": {
-        this.navigete("create/:" + this.currentOption)
+        this.navigete("new?flag=create&id=" + this.currentOption)
         this.close()
         break;
       }

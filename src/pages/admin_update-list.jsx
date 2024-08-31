@@ -49,14 +49,14 @@ const AdminUpdateList = observer(() => {
             </>
           ) : (
             <div className="loader">
-              <FadeLoader color="#1c1c1c" />
+              <FadeLoader color="rgb(36, 39, 63)" />
             </div>
           )}
         </div>
         <div className="ui block__return">
               Вернуться назад
               <button className="ui_button" onClick={() => navigate(-1)}>
-                <img src="../../page/go_back.svg" alt="" />
+                <img src="./page/go_back.svg" alt="" />
               </button>
             </div>
       </main>

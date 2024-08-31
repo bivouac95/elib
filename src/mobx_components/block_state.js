@@ -68,6 +68,24 @@ class BlockState {
       this.update(this.id);
     }
   }
+
+  async createBlock(){
+    const { data, error } = await supabase
+    .from("articles")
+    .insert([
+      {
+        page: this.page,
+        headling: this.headling,
+        images: this.images,
+        content: this.content,
+      },
+    ]);
+    if (error) {
+      console.error(error);
+    } else {
+      this.update(data[0].id);
+    }
+  }
 }
 
 export default new BlockState();

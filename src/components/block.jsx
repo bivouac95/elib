@@ -71,7 +71,7 @@ const Block = ({ block }) => {
               className="ui_button"
               onClick={() => window.open(block.content, "_blank")}
             >
-              <img src="../../page/download.svg" alt="" />
+              <img src="./page/download.svg" alt="" />
             </button>
           </div>
         </div>

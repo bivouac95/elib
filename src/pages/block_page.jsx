@@ -117,7 +117,7 @@ const BlockPage = observer(() => {
             <div className="ui block__return">
               Вернуться назад
               <button className="ui_button" onClick={() => navigate(-1)}>
-                <img src="../page/go_back.svg" alt="" />
+                <img src="./page/go_back.svg" alt="" />
               </button>
             </div>
           </main>
