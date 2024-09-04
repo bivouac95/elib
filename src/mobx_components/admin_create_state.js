@@ -7,7 +7,7 @@ class AdminCreateState {
 
   isPhotoMenuOpen = false;
   newPhotoUrl = "";
-  textAreaHeight = 0;
+  textAreaHeight = 64;
   
   setNewPhotoUrl(url) {
     runInAction(() => {

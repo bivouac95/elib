@@ -39,8 +39,8 @@ const Block = ({ block }) => {
               }
             >
               {block.images
-                ? block.images.map((image) => (
-                    <Image link={image} key={image} />
+                ? block.images.map((image, index) => (
+                    <Image link={image} key={image + index} />
                   ))
                 : []}
             </div>

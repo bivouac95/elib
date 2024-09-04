@@ -2,19 +2,18 @@ import React from "react";
 import Header from "../components/header.jsx";
 import Footer from "../components/footer.jsx";
 import FadeLoader from "react-spinners/FadeLoader";
-import Slider from 'react-slick';
+import Slider from "react-slick";
 
 import "./block_page.css";
 import "../components/block.css";
 import "./page.css";
-import 'slick-carousel/slick/slick.css'; 
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { useNavigate } from "react-router-dom";
-
 
 import block from "../mobx_components/block_state.js";
 
@@ -35,7 +34,7 @@ const BlockPage = observer(() => {
   useEffect(() => {
     block.update(String(id).substring(1));
   }, [id]);
-  
+
   const settings = {
     dots: true,
     infinite: true,
@@ -53,26 +52,47 @@ const BlockPage = observer(() => {
         case 3:
           blockData = (
             <div className="block--article">
-              <Slider {...settings}>
-                {block.images ? block.images.map((image, i) => (
-                  <div className="large_image" key={"large_image" + i}>
-                  <img
-                    src={image}
-                    alt=""
-                    className="large_image__image"
-                    key={"image" + i}
-                  />
-                  <img
-                    src={image}
-                    alt=""
-                    className="large_image__backgroung"
-                    key={"image__backgroung" + i}
-                  />
-                </div>
-                )) : []}
-              </Slider>
+              {block.images && block.images.length > 0 ? (
+                block.images.length > 1 ? (
+                  <Slider {...settings}>
+                    {block.images.map((image, i) => (
+                      <div className="large_image" key={"large_image" + i}>
+                        <img
+                          src={image}
+                          alt=""
+                          className="large_image__image"
+                          key={"image" + i}
+                        />
+                        <img
+                          src={image}
+                          alt=""
+                          className="large_image__backgroung"
+                          key={"image__backgroung" + i}
+                        />
+                      </div>
+                    ))}
+                  </Slider>
+                ) : (
+                  <div className="large_image">
+                    <img
+                      src={block.images[0]}
+                      alt=""
+                      className="large_image__image"
+                    />
+                    <img
+                      src={block.images[0]}
+                      alt=""
+                      className="large_image__backgroung"
+                    />
+                  </div>
+                )
+              ) : (
+                <></>
+              )}
               {block.content.split("\n").map((p, i) => (
-                <p className="block__text" key={i}>{p}</p>
+                <p className="block__text" key={i}>
+                  {p}
+                </p>
               ))}
             </div>
           );
