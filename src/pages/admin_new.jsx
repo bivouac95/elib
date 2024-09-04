@@ -8,6 +8,7 @@ import { useSearchParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import { useNavigate } from "react-router-dom";
 import ReactDOM from "react-dom/client";
+import { useState } from "react";
 import parse from "html-react-parser";
 
 import "./admin_page.css";
@@ -81,13 +82,14 @@ const AdminNew = observer(() => {
                         className="form form--url"
                         value={admincreate.newPhotoUrl}
                         style={{
-                          height: "auto",
+                          height: admincreate.textAreaHeight,
                           overflowY: "hidden",
                         }}
                         onChange={(e) => {
                           admincreate.setNewPhotoUrl(e.target.value);
                           e.target.style.height = "auto";
-                          e.target.style.height = e.target.scrollHeight + "px";
+                          admincreate.textAreaHeight = e.target.scrollHeight;
+                          e.target.style.height = `${admincreate.textAreaHeight}px`;
                         }}
                         placeholder="URL фотографии"
                       ></textarea>
@@ -102,6 +104,7 @@ const AdminNew = observer(() => {
                               admincreate.newPhotoUrl,
                             ]);
                             admincreate.setNewPhotoUrl("");
+                            admincreate.setTextAreaHeight(64);
                           }}
                         >
                           <img src="./page/save.svg" alt="" />

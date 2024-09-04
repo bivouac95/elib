@@ -58,7 +58,7 @@ const UsualPage = observer(() => {
             <div className={page.id == 5 ? "section_grid" : "section_column"}>
               {page.content.map((item) => (
                 <Block key={item.id} block={item} />
-              ))}
+              )).reverse()}
             </div>
           </main>
           <Footer />

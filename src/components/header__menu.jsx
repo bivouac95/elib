@@ -14,7 +14,7 @@ const HeaderMenu = ({ isMenuOpen, toggle }) => {
       <Link to="/:files"><nav onClick={toggle}>Файлы</nav></Link>
       <Link to="/:articles"><nav onClick={toggle}>Статьи</nav></Link>
       <Link to="/feedback"><nav onClick={toggle}>Обратная связь</nav></Link>
-      <Link to="/:elib"><nav onClick={toggle}>Элктронная библиотека</nav></Link>
+      <Link to="/:elib"><nav onClick={toggle}>Электронная библиотека</nav></Link>
       <Link to="/:gallery"><nav onClick={toggle}>Фотогалерея</nav></Link>
     </main>
   );

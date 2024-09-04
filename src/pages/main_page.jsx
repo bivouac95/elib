@@ -61,7 +61,7 @@ const Main = observer(() => {
                 <h3> Статьи </h3>
               </nav>
               <nav onClick={(event) => HandleClick(event, "elib")}>
-                <h3> Элктронная библиотека </h3>
+                <h3> Электронная библиотека </h3>
               </nav>
               <nav onClick={(event) => HandleClick(event, "gallery")}>
                 <h3> Фотогалерея </h3>
@@ -89,7 +89,7 @@ const Main = observer(() => {
             <div className={page.id == 5 ? "section_grid" : "section_column"}>
               {page.content.map((item) => (
                 <Block key={item.id} block={item} />
-              ))}
+              )).reverse()}
             </div>
           </>
         )}

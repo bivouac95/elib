@@ -110,6 +110,7 @@
   box-sizing: border-box;
   border: #1c1c1c 1px solid;
   resize: none;
+  min-height: 88px;
 }
 
 .form:active{
